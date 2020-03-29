@@ -1,9 +1,9 @@
 package github.faisal6621.enums;
 
 /**
- * Shape
+ * ShapeEnum
  */
-public enum Shape {
+public enum ShapeEnum {
 
     SQUARE, RECTANGLE, TRIANGLE,
 

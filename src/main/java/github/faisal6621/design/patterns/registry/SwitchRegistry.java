@@ -5,13 +5,14 @@ import github.faisal6621.bean.Shape;
 import github.faisal6621.bean.Square;
 import github.faisal6621.bean.Triangle;
 import github.faisal6621.design.patterns.factory.FactorySupplier;
+import github.faisal6621.enums.ShapeEnum;
 
 /**
  * SwitchRegistry
  */
 public class SwitchRegistry {
 
-    public FactorySupplier<? extends Shape> buildShapeFactory(github.faisal6621.enums.Shape shape) {
+    public FactorySupplier<? extends Shape> buildShapeFactory(ShapeEnum shape) {
         switch (shape) {
             case SQUARE:
                 return Square::new;

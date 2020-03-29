@@ -4,7 +4,7 @@ import github.faisal6621.bean.Rectangle;
 import github.faisal6621.bean.Shape;
 import github.faisal6621.bean.Square;
 import github.faisal6621.bean.Triangle;
-import github.faisal6621.design.patterns.FactorySupplier;
+import github.faisal6621.design.patterns.factory.FactorySupplier;
 
 /**
  * SwitchRegistry

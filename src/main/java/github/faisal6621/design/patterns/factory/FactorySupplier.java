@@ -1,4 +1,4 @@
-package github.faisal6621.design.patterns;
+package github.faisal6621.design.patterns.factory;
 
 import java.util.List;
 import java.util.Objects;

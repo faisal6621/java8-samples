@@ -1,6 +1,6 @@
 package github.faisal6621.design.patterns.registry;
 
-import github.faisal6621.design.patterns.FactorySupplier;
+import github.faisal6621.design.patterns.factory.FactorySupplier;
 import github.faisal6621.enums.Shape;
 
 /**

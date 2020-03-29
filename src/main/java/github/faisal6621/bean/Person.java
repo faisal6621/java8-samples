@@ -1,4 +1,4 @@
-package github.faisal6621.collections;
+package github.faisal6621.bean;
 
 import java.time.LocalDate;
 

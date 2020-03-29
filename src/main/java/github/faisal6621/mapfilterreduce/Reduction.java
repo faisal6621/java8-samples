@@ -10,6 +10,8 @@ import java.util.function.BinaryOperator;
 public class Reduction {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(4, 5, 3, 2);
+        List<Integer> aNumber = Arrays.asList(2);
+        List<Integer> negativeNumbers = Arrays.asList(-2, -3, -4);
 
         // Associativity
         BinaryOperator<Integer> sumOfNumbers = (i, j) -> i + j; // true
@@ -25,5 +27,10 @@ public class Reduction {
         numbers.stream().reduce(firstNumber).ifPresent(System.out::println);
         numbers.stream().reduce(lastNumber).ifPresent(System.out::println);
         numbers.stream().reduce(avgOfNumbers).ifPresent(System.out::println);
+
+        // Identity
+        aNumber.stream().reduce(highestOfNumbers).ifPresent(System.out::println);
+        negativeNumbers.stream().reduce(highestOfNumbers).ifPresent(System.out::println);
+        System.out.println(negativeNumbers.stream().reduce(0, highestOfNumbers)); // incorrect result
     }
 }

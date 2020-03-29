@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import github.faisal6621.bean.City;
+import github.faisal6621.bean.Person;
+
 /**
  * TestCollections
  */

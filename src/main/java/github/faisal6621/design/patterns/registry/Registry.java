@@ -1,7 +1,6 @@
 package github.faisal6621.design.patterns.registry;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.EnumMap;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -19,8 +18,8 @@ public interface Registry {
 
     public static Registry createRegistry(Consumer<Builder<Shape>> consumer,
             Function<ShapeEnum, FactorySupplier<Shape>> errorFunction) {
-        Map<ShapeEnum, FactorySupplier<Shape>> map = new HashMap<>();
-        Builder<Shape> builder = (shape, factory) -> map.put(shape, factory);
+        EnumMap<ShapeEnum, FactorySupplier<Shape>> map = new EnumMap<>(ShapeEnum.class);
+        Builder<Shape> builder = map::put;
         consumer.accept(builder);
 
         return shape -> map.computeIfAbsent(shape, errorFunction);

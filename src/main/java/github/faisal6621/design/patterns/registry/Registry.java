@@ -23,11 +23,6 @@ public interface Registry {
         Builder<Shape> builder = (shape, factory) -> map.put(shape, factory);
         consumer.accept(builder);
 
-        // Function<? super ShapeEnum, ? extends FactorySupplier<Shape>> mappingFunction
-        // = key -> {
-        // throw new IllegalArgumentException("unknown shape: " + key);
-        // };
-
         return shape -> map.computeIfAbsent(shape, errorFunction);
     }
 

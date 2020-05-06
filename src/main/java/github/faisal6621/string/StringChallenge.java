@@ -1,4 +1,4 @@
-package github.faisal6621.other;
+package github.faisal6621.string;
 
 public class StringChallenge {
 
